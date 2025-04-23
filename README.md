@@ -32,7 +32,7 @@ How to use
 
 2. Write the voting question and options.
 
- 3. Pay a small fee in BNB.
+ 3. Pay a small fee in ETH.
 
 4. Launch a poll and let others vote on it.
 
