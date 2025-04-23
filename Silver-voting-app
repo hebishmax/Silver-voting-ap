@@ -120,7 +120,7 @@ app.listen(3001, () => console.log("API listening on port 3001"));
 // 6. docs/project_overview.md
 # Silver: Transparent Voting DApp
 
-Silver is a decentralized polling platform built for underserved regions, offering blockchain-based transparency for public opinion collection. Users can create and vote on polls using BNB or ETH, ensuring engagement through incentives and sustainability through gas fees.
+Silver is a decentralized polling platform built for underserved regions, offering blockchain-based transparency for public opinion collection. Users can create and vote on polls using ETH, ensuring engagement through incentives and sustainability through gas fees.
 
 **Core Stack**:
 - Frontend: React + shadcn/ui
