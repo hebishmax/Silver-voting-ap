@@ -24,6 +24,8 @@ Smart Contract: Solidity (Ethereum)
 
 Backend (optional): Bubble (for managing data interfaces)
 
+We added a backup file to replace python, flask place bubble
+
 Wallet integration: MetaMask + Ethers.js
 
 How to use
