@@ -1,0 +1,28 @@
+const submitPoll = async () => {
+  setSubmitting(true);
+
+  try {
+    // إرسال بيانات الاستطلاع إلى Flask API
+    const response = await fetch('http://localhost:5000/submitPoll', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        question: question,
+        options: voteOptions,
+      }),
+    });
+
+    const result = await response.json();
+    if (result.status === 'success') {
+      alert("تم إنشاء الاستطلاع بنجاح!");
+    } else {
+      alert("حدث خطأ: " + result.message);
+    }
+  } catch (error) {
+    alert("حدث خطأ أثناء الاتصال بـ API");
+  }
+
+  setSubmitting(false);
+};
