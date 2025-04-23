@@ -8,7 +8,7 @@ Features
 
 User-generated polls
 
-Connecting a MetaMask wallet to pay with BNB (token fee)
+Connecting a MetaMask wallet to pay with ETH (token fee)
 
 Recording votes on the blockchain for absolute transparency
 
