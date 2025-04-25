@@ -1,0 +1,32 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+contract VotingContract {
+    struct Poll {
+        string question;
+        string[] options;
+        mapping(uint => uint) votes;
+        address creator;
+        bool active;
+    }
+
+    Poll[] public polls;
+
+    function createPoll(string memory _question, string[] memory _options) public {
+        Poll storage newPoll = polls.push();
+        newPoll.question = _question;
+        newPoll.options = _options;
+        newPoll.creator = msg.sender;
+        newPoll.active = true;
+    }
+
+    function vote(uint _pollId, uint _optionIndex) public {
+        require(polls[_pollId].active, "استطلاع غير مفعل");
+        polls[_pollId].votes[_optionIndex]++;
+    }
+
+    function getPoll(uint _pollId) public view returns (string memory, string[] memory, address, bool) {
+        Poll storage poll = polls[_pollId];
+        return (poll.question, poll.options, poll.creator, poll.active);
+    }
+}
